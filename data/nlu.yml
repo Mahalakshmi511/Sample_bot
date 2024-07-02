@@ -1,0 +1,37 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - Hello!
+    - Hi there!
+    - hi
+    - hii
+    - hey
+    - hey there
+    - greetings
+
+- intent: ask_book_info
+  examples: |
+    - I want information about a book
+    - I want to know about a book
+    - Can you tell me about a book?
+    - Tell me about a book
+    - Give me details about a book
+    - Provide information about a book
+    - I need information on a book
+    - Do you have details about a book?
+    - Can I get details on a book?
+    - I need to know about a book
+
+- intent: provide_book_title
+  examples: |
+    - The book title is [WINTER LOST](book_title)
+    - [RED SKY MOURNING](book_title)
+    - It's [RED SKY MOURNING](book_title)
+    - The title is [MIDDLE OF THE NIGHT](book_title)
+    - I am interested in [THE HOUSEMAID IS WATCHING](book_title)
+    - I want details on [THE HOUSEMAID IS WATCHING](book_title)
+    - I'm looking for information on [RED SKY MOURNING](book_title)
+    - Please tell me about [WINTER LOST](book_title)
+    - Do you have information on [MIDDLE OF THE NIGHT](book_title)?
+    - Give me details about [THE HOUSEMAID IS WATCHING](book_title)

@@ -1,0 +1,39 @@
+version: '3.1'
+
+intents:
+  - greet
+  - provide_book_title
+  - ask_book_info
+  
+entities:
+  - book_title
+
+slots:
+  book_title:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: book_title
+
+responses:
+  utter_greet:
+    - text: Hi there!
+
+  utter_ask_book_title:
+    - text: Please provide the book title.
+
+  utter_submit:
+    - text: Great! Let me fetch the details for you.
+
+actions:
+  - action_fetch_book_info
+
+forms:
+  book_form:
+    required_slots:
+      - book_title
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,20 @@
+version: "3.1"
+
+rules:
+
+- rule: considering data from user
+  steps:
+  - intent: ask_book_info
+  - action: book_form
+  - active_loop: book_form
+
+- rule: submit data
+  condition:
+  - active_loop: book_form
+  steps:
+  - action: book_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_fetch_book_info
+  

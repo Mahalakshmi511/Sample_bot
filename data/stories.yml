@@ -1,0 +1,17 @@
+version: '3.1'
+
+stories:
+# - story: greet
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+# - story: book info path
+#   steps:
+#   - intent: ask_book_info
+#   - action: book_form
+#   - active_loop: book_form
+#   - slot_was_set:
+#     - book_title: <book_title>
+#   - action: utter_submit
+#   - action: action_fetch_book_info
